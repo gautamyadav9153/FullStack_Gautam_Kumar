@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Naukri-style Job Portal</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background:#f4f6fb;
+        }
+        header{
+            background:white;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+        }
+        .logo{
+            font-size:26px;
+            font-weight:bold;
+            color:#2563eb;
+        }
+        nav a{
+            margin-left:20px;
+            text-decoration:none;
+            color:#333;
+            font-weight:600;
+        }
+        .hero{
+            background:#2563eb;
+            color:white;
+            padding:50px 20px;
+            text-align:center;
+        }
+        .search-box{
+            background:white;
+            width:70%;
+            margin:30px auto;
+            padding:20px;
+            border-radius:8px;
+            display:flex;
+            gap:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.15);
+        }
+        .search-box input{
+            flex:1;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+        .search-box button{
+            padding:12px 25px;
+            background:#2563eb;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        .main{
+            width:85%;
+            margin:40px auto;
+            display:grid;
+            grid-template-columns:3fr 1fr;
+            gap:25px;
+        }
+        .job-card{
+            background:white;
+            padding:20px;
+            border-radius:8px;
+            margin-bottom:20px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+        }
+        .job-card h3{
+            color:#2563eb;
+            margin-bottom:5px;
+        }
+        .job-card p{
+            margin:4px 0;
+            color:#555;
+        }
+        .job-card img{
+            width:60px;
+            float:right;
+        }
+        .job-card button{
+            margin-top:10px;
+            padding:8px 16px;
+            background:#16a34a;
+            color:white;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+        }
+        .login-box{
+            background:white;
+            padding:20px;
+            border-radius:8px;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+        }
+        .login-box h2{
+            text-align:center;
+            margin-bottom:15px;
+        }
+        .login-box img{
+            width:100%;
+            border-radius:6px;
+            margin-bottom:15px;
+        }
+        .login-box input{
+            width:100%;
+            padding:10px;
+            margin-bottom:10px;
+            border:1px solid #ccc;
+            border-radius:4px;
+        }
+        .login-box button{
+            width:100%;
+            padding:10px;
+            background:#2563eb;
+            color:white;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+        }
+        footer{
+            background:#1e3a8a;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">RozGaarLelo.com</div>
+    <nav>
+        <a href="#">Jobs</a>
+        <a href="#">Companies</a>
+        <a href="#">Services</a>
+        <a href="#login">Login</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Find your dream job now</h1>
+    <p>5 lakh+ jobs for you to explore</p>
+</section>
+
+<div class="search-box">
+    <input type="text" placeholder="Skills, Designations, Companies">
+    <input type="text" placeholder="Location">
+    <input type="text" placeholder="Experience">
+    <button>Search</button>
+</div>
+
+<div class="main">
+    <div>
+        <div class="job-card">
+            <img src="https://www.designveloper.com/wp-content/uploads/2021/01/How-Much-Does-Google-Pay-5-1024x683.jpg" alt="company">
+            <h3>Software Engineer</h3>
+            <p>Google</p>
+            <p>Bangalore • 3-4 Years</p>
+            <p>₹50-60 LPA</p>
+            <button>Apply</button>
+        </div>
+        <div class="job-card">
+            <img src="data:image/jpeg;base64,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" alt="company">
+            <h3>Frontend Developer</h3>
+            <p>Microsoft</p>
+            <p>Delhi • 1-3 Years</p>
+            <p>₹20-30 LPA</p>
+            <button>Apply</button>
+        </div>
+        <div class="job-card">
+            <img src="https://media.licdn.com/dms/image/v2/D4E0BAQF8eBsUuMsyxQ/company-logo_200_200/company-logo_200_200/0/1681831671600/datacorp_france_logo?e=2147483647&v=beta&t=73bxsw-mvvlCm9i9zMjnK7RJRCSVUa86tzalBpM1fXg" alt="company">
+            <h3>Data Analyst</h3>
+            <p>DataCorp</p>
+            <p>Hyderabad • Fresher</p>
+            <p>₹4-6 LPA</p>
+            <button>Apply</button>
+        </div>
+    </div>
+
+    <div id="login" class="login-box">
+        <h2>Login</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/11284/11284777.png" alt="login">
+        <input type="text" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button>Login</button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 RozGaar | Inspired by Naukri.com</p>
+</footer>
+
+</body>
+</html>
